@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <script src="gameoflife.js"></script>
+</head>
+<body>
+   <h1>Juego de la vida</h1>
+
+    <div id="tablero">     
+    <script>
+        //Crear matriz de Llenado
+        //document.writeln("Mariz Inicial: <br>");
+        var matrizInicial= new Array(5);
+        for(var columnas=0; columnas<5; columnas++){
+            matrizInicial[columnas] = new Array(5);
+        }  
+
+        //Crear Matriz de Numeros de Vecinos
+        var matrizVecinos= new Array(5);
+        for(var columnas=0; columnas<5; columnas++){
+            matrizVecinos[columnas] = new Array(5);
+        }
+
+      // Iniciar E Imprimir Matriz Con NumerosRandom
+      matrizInicial=  iniciarMatriz(matrizInicial);
+      //imprimirMatriz(matrizInicial);
+      //Generar Matriz de Numero de Vecinos
+      //document.write("Matriz de numeros de vecinos: <br>")
+     // matrizVecinos = llenarMaestraVecinos(matrizInicial, matrizVecinos);
+     //imprimirMatriz(matrizVecinos);
+
+     //Generar e imprimir matriz de resultados
+    // document.write("Matriz de RESULTADO: <br>")
+    // matrizInicial=matrizResultado(matrizInicial, matrizVecinos);
+     //imprimirMatriz(matrizInicial);  
+     
+        function imprimirNext(matrizVecinos, matrizInicial){
+            matrizVecinos = llenarMaestraVecinos(matrizInicial, matrizVecinos);
+            matrizInicial=matrizResultado(matrizInicial, matrizVecinos);
+            imprimirMatriz(matrizInicial);  
+            document.write("<br>")
+            
+        }
+
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+        imprimirNext(matrizVecinos, matrizInicial);
+     
+
+
+     
+    </script>
+</div>
+  
+
+   
+
+
+    
+</body>
+</html>
